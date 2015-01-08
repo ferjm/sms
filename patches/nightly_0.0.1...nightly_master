@@ -1,0 +1,8 @@
+diff  a/app/config.json
+@@ 4
+-
++    "version": "0.0.1.1",
+diff  a/app/style/sms.css
+@@ 116
+-
++  background-color: #f06;

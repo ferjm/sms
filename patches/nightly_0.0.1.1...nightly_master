@@ -1,0 +1,26 @@
+diff  a/app/config.json
+@@ 4
+-
++    "version": "0.0.1.2",
+diff  a/app/index.html
+@@ 41
+-
++          <input type="button" class="small" value="=" data-type="command" />
++          <input id="phone" type="button" class="small" value="&#9990" data-type="command" />
+diff  a/app/js/sms.js
+@@ 203
++  document.getElementById('phone').onclick = function() {
++    var value = sms.currentInput || sms.result.toString();
++    if ('mozTelephony' in navigator) {
++      navigator.mozTelephony.dial(value).then(function() {}, function() {
++        sms.display.textContent = 'Call error';
++      });
++    } else {
++      alert(value);
++    }
++  };
+diff  a/app/style/sms.css
+@@ 102
+-
++input[value="="],
++#phone {

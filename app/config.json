@@ -1,0 +1,12 @@
+{
+  "update": {
+    "channel": "nightly",
+    "version": "0.0.1",
+
+    "url": "/sms/patches/",
+
+    "headers": {
+      "Accept" : "application/vnd.github.v3.patch"
+    }
+  }
+}
